@@ -1,0 +1,13 @@
+@import "reset.scss";
+body {
+    background: white;
+
+    .coll-full {
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 10px;
+        position: relative;
+        width: 90%;
+        display: flex;
+    }
+}
