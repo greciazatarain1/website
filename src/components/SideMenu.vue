@@ -5,17 +5,17 @@
     <div class="side-menu" :class="{ openMenu: isOpen }">
         <nav class="side-menu-inner-container menu-container">
             <ul class="menu-list">
-                <li><router-link to="/">home</router-link></li>
+                <li><a @click="activeMenu()" href="/#home">home</a></li>
                 <li><a @click="activeMenu()" href="/#about-me">about</a></li>
-                <li><router-link to="/about">projects</router-link></li>
+                <li><a @click="activeMenu()" href="/#skills">skills</a></li>
             </ul>
         </nav>
         <div class="side-menu-inner-container contact-info-container">
             <div class="contact-info">
                 <p class="greeting">hola</p>
-                <p>Get in touch via <br/><a href="mailto:greciazatarain@gmail.com"><i class="fa-solid fa-envelope"></i>greciazatarain@gmail.com</a>.
+                <p v-if="show">Get in touch via <br/><a href="mailto:greciazatarain@gmail.com"><i class="fa-solid fa-envelope"></i>greciazatarain@gmail.com</a>.
                 </p>
-                <p>You can also find me on<br/><a href="https://www.linkedin.com/in/sandy-pranjic-b8161170/" target="blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a> 
+                <p>Get in touch via<br/><a href="https://www.linkedin.com/in/sandy-pranjic-b8161170/" target="blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a> 
                     <br/>or check my code on<br/><a href="https://github.com/greciazatarain1" target="blank"><i class="fa-brands fa-github"></i>GitHub</a>.
                 </p>
             </div>
@@ -29,7 +29,8 @@
     data() {
       return {
         isActive: false,
-        isOpen: false
+        isOpen: false,
+        show: false
       }
     },
     methods: {

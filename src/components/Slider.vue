@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     nextImage(){
-      if(this.currentImage !== this.images.length - 1) {
+      if(this.currentImage < this.images.length - 1) {
         this.currentImage++
       }
     },

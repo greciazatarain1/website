@@ -11,7 +11,7 @@
                 <span class="bold">I enjoy the art of creating by coding.</span>
             </p>
             <span class="separator"></span>
-            <p class="title2">Skills</p>
+            <p id="skills" class="title2">Skills</p>
             <ul class="skills">
                 <li v-for="skill in skills" :key="index"><i class="fa-solid fa-check"></i>{{ skill }}</li>
             </ul>

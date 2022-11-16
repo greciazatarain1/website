@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="home">
     <div class="coll-full header-container">
       <h1 class="logo">Grecia Zatarain</h1>
       <SideMenu />
