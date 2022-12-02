@@ -1,27 +1,25 @@
 <template>
-  <div class="home">
-    <Header />
-    <Slider />
+    <Attraction />
     <AboutMe />
-    <Footer />
-
-  </div>
+    <MySkills />
+    <Projects />
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Slider from "@/components/Slider.vue";
-import AboutMe from "@/components/AboutMe.vue";
-import Footer from "@/components/Footer.vue";
+import Attraction from "@/components/sections/Attraction.vue";
+import AboutMe from "@/components/sections/AboutMe.vue";
+import MySkills from "@/components/sections/MySkills.vue";
+import Projects from "@/components/sections/Projects.vue";
+
 
 
 export default {
   name: "HomeView",
   components: {
-    Header,
-    Slider,
     AboutMe,
-    Footer
+    MySkills,
+    Attraction,
+    Projects
 },
 };
 </script>
