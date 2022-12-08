@@ -2,7 +2,7 @@
     <section id="Attraction" class="flex-center">
         <div class="coll-full">
             <div class="text-container flex-center">  
-                <img class="flower" src="@/assets/flower.svg" />
+                <img class="flower" src="@/assets/flower.svg" alt="Flower"/>
                 <h2 class="title">Hi, I'm Grecia</h2>
                 <h3 class="p1">A creative Frontend developer base in Amsterdam, Netherlands.</h3>         
             </div>
