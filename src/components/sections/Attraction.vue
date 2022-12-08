@@ -3,8 +3,8 @@
         <div class="coll-full">
             <div class="text-container flex-center">  
                 <img class="flower" src="@/assets/flower.svg" />
-                <p class="title">Hi, I'm Grecia</p>
-                <h2 class="p1">A creative Frontend developer base in Amsterdam, Netherlands.</h2>         
+                <h2 class="title">Hi, I'm Grecia</h2>
+                <h3 class="p1">A creative Frontend developer base in Amsterdam, Netherlands.</h3>         
             </div>
         </div>
     </section>

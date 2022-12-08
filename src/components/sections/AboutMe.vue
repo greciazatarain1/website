@@ -6,7 +6,7 @@
                 <span class="circles"></span>
             </div>
             <div class="text-container">
-                <h2 class="title2">About me</h2>
+                <h3 class="title2">About me</h3>
                 <p class="description">
                     I'm a <strong>front-end developer</strong> with 5 years of experience working in web development.<br/><br/>
                     I have built responsive user interfaces for all kinds of websites (retail, real estate, restaurants, services, events, music, etc.) and also have experience in quality assurance writing and running test cases.<br/> <br/>

@@ -1,7 +1,7 @@
 <template>
     <section id="skills">
         <div class="coll-full max-width-small">
-            <p  class="title2">My Skills</p>
+            <h3  class="title2">My Skills</h3>
             <ul class="skills flex-center">
                 <li class="flex-center"
                     v-for="skill in skills" 

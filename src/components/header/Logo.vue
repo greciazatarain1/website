@@ -1,5 +1,5 @@
 <template>
-    <h1 class="logo"><RouterLink to="/">Grecia Zatarain</RouterLink></h1>
+    <h1 class="logo"><RouterLink to="/">Grecia Zatarain<span> - Frontend Developer in Amsterdam, Netherlands</span></RouterLink></h1>
 </template>
   
 <script>
@@ -14,6 +14,15 @@ export default {
         margin-right: 20px;
         font-size: 22px;
         font-family: "Lora", serif;
+        position: relative;
+        overflow: hidden;
+
+        span {
+            position: absolute;
+            opacity: 0;
+            right: 0;
+            font-size: 0em;
+        }
 }
 </style>
   
