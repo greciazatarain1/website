@@ -7,7 +7,7 @@
                     :key="index"
                     class="item-project flex-center">
                     <div class="image-container">
-                        <img :src="project.image" :alt="project.altImage"/>
+                        <img :src="project.image" :alt="project.name"/>
                     </div>
                     <div class="text-container">
                         <h3 class="title3">{{ project.name }}</h3>
@@ -39,7 +39,6 @@ export default {
                     description: "A website for a restaurant with Menu, About and Contact pages.",
                     tech: ["Vue", "HTML", "SCSS"],
                     image: require("@/assets/img-project-01.jpg"),
-                    altImage: "Restaurant Website",
                     githubUrl: "https://github.com/greciazatarain1/restaurant-website",
                     liveUrl: "https://greciazatarain1.github.io/project-restaurant/"
                 }
