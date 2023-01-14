@@ -1,5 +1,7 @@
 <template>
-    <h1 class="logo"><RouterLink to="/">Grecia Zatarain<span> - Frontend Developer in Amsterdam, Netherlands</span></RouterLink></h1>
+    <h1 class="logo">
+        <RouterLink to="/">Grecia Zatarain<span class="logo__description"> - Frontend Developer in Amsterdam, Netherlands</span></RouterLink>
+    </h1>
 </template>
   
 <script>
@@ -17,7 +19,7 @@ export default {
         position: relative;
         overflow: hidden;
 
-        span {
+        &__description {
             position: absolute;
             opacity: 0;
             right: 0;

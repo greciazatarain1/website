@@ -1,15 +1,13 @@
 <template>
-    <section id="skills">
-        <div class="coll-full max-width-small">
-            <h3  class="title2">My Skills</h3>
-            <ul class="skills flex-center">
-                <li class="flex-center"
-                    v-for="skill in skills" 
-                    :key="index">
-                    <i :class="skill.icon"></i>{{ skill.name }}
-                </li>
-            </ul>
-        </div>
+    <section id="skills" class="skills">
+        <h3  class="text-heading-medium text-heading-medium--max-width">My Skills</h3>
+        <ul class="list-icons">
+            <li class="list-icons__item"
+                v-for="skill in skills" 
+                :key="index">
+                <i :class="skill.icon"></i>{{ skill.name }}
+            </li>
+        </ul>
     </section>
 </template>
 
@@ -98,12 +96,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#skills {
-    background-color:#fffbf2;
-
-}
 .skills {
+    background-color:#fffbf2;
+}
+.list-icons {
     background: white;
+    display: flex;
     flex-wrap: wrap;
     box-shadow: 0px 10px 40px 0px rgb(222 200 200 / 40%);
     padding: 20px;
@@ -111,8 +109,12 @@ export default {
     justify-content: space-between;
     position: relative;
     z-index: 1;
+    list-style: none;
+    max-width: 960px;
+    margin: 0 auto;
 
-    li {
+    &__item {
+        display: flex;
         flex-direction: column;
         max-width: 105px;
         text-align: center;
@@ -120,7 +122,7 @@ export default {
         margin: 20px;
         line-height: 1.2em;
 
-        @include phone-only {
+        @include mobile {
             width: 50%;
         }
 

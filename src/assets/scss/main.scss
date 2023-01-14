@@ -1,45 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700');
-/* Reset */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline; }
-  
-  /* HTML5 display-role reset for older browsers */
-  
-  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block; }
-  
-  body {
-    line-height: 1; }
-  
-  ol, ul {
-    list-style: none; }
-  
-  blockquote, q {
-    quotes: none; }
-  
-  blockquote {
-    &:before, &:after {
-      content: '';
-      content: none; } }
-  
-  q {
-    &:before, &:after {
-      content: '';
-      content: none; } }
-  
-  table {
-    border-collapse: collapse;
-    border-spacing: 0; }
-  
-  img{
-    display: block;
-    width: 100%;
-  }
-
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -49,51 +15,71 @@ body {
     font-weight: 400;
 }
 
-.coll-full {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 20px;
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.text-heading-medium {
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
 
-    &.max-width-small {
-      max-width: 1000px;
-    }
+  &--max-width {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    &.row-direction {
-      flex-direction: row;
-    }
+  @include desktop {
+    font-size: 2.3em;
+    text-align: left;
+  }
 }
 
-strong {
-    font-weight: bold;
+.text-heading-large {
+  font-size: 2em;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  margin: 15px 0;
+
+  @include desktop {
+    font-size: 3.5em;
+  }
 }
 
-p {
+.text-heading-xlarge {
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 15px 0;
+  line-height: 1em;
+
+  @include desktop {
+    font-size: 4em;
+  }
+}
+
+.paragraph-small {
     font-size: 1em;
     line-height: 1.5em;
 }
 
-.p1 {
-  font-size: 1.2em;
-  line-height: 1.5em;
-  font-weight: 400;
-
-  @include desktop {  
-    font-size: 1.6em;
-  }
-}
-
-.p2 {
+.paragraph-medium {
   font-size: 1.1em;
   line-height: 1.5em;
   font-weight: 400;
 
   @include desktop {  
     font-size: 1.3em;
+  }
+}
+
+.paragraph-large {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 400;
+
+  @include desktop {  
+    font-size: 1.6em;
   }
 }
 
@@ -110,56 +96,11 @@ a {
     font-weight: 700;
 }
 
-.title {
-  font-family: 'Lora', serif;
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: 600;
-  margin: 15px 0;
-  line-height: 1em;
-
-  @include desktop {
-    font-size: 4em;
-  }
-}
-
-.title2 {
-    font-family: 'Lora', serif;
-    font-size: 2em;
-    font-weight: 600;
-    margin-bottom: 25px;
-    text-align: center;
-
-    @include desktop {
-      font-size: 2.3em;
-      text-align: left;
-    }
-}
-
-.title3 {
-  font-size: 2em;
-  font-weight: 600;
-  font-family: 'Lora', serif;
-  font-weight: 600;
-  margin: 15px 0;
-
-  @include desktop {
-    font-size: 3.5em;
-  }
-}
-
 section {
-  padding: 80px 0;
+  padding: 80px 20px;
   box-sizing: border-box;
 
   @include desktop {
-    padding: 90px 0;
+    padding: 90px 20px;
   }
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
 }

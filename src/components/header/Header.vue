@@ -1,29 +1,30 @@
 <template>
-  <header id="home">
-    <div class="header-container">
+  <header id="home" class="header">
+    <div class="header__container">
       <Logo />
-      <SideMenu />
+      <MainMenu />
     </div>
   </header>
 </template>
 
 <script>
-import SideMenu from "@/components/header/SideMenu.vue";
+import MainMenu from "@/components/header/MainMenu.vue";
 import Logo from "@/components/header/Logo.vue";
 
 export default {
   name: "Header",
   components: {
-    SideMenu,
+    MainMenu,
     Logo
   }, 
 };
 </script>
 
 <style scoped lang="scss">
-header {
+.header {
     padding: 20px 0;
-   .header-container {
+    
+   &__container {
     display: flex;
     justify-content: space-between;
     align-content: center;

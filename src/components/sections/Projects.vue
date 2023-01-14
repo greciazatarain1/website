@@ -1,30 +1,27 @@
 <template>
-    <section id="projects">
-        <div class="coll-full">
-            <ul class="project-list">
-                <li
-                    v-for="project in projects"
-                    :key="index"
-                    class="item-project flex-center">
-                    <div class="image-container">
-                        <img :src="project.image" :alt="project.name"/>
+    <section id="projects" class="projects">
+        <ul class="cards">
+            <li
+                v-for="project in projects"
+                :key="index"
+                class="card">
+                <img  class="card__image" :src="project.image" :alt="project.name"/>
+                <div class="card__text-container">
+                    <h3 class="text-heading-large">{{ project.name }}</h3>
+                    <p class="paragraph-medium">{{ project.description }}</p>
+                    <ul class="bullet-list">
+                        <li class="bullet-list__item" v-for="item in project.tech">
+                            {{ item }}<i class="bullet-list__icon fa-solid fa-circle"></i>
+                        </li>
+                    </ul>
+                    <div class="card__links">
+                        <a class="link" :href="project.githubUrl" target="_blank">Check code</a>
+                        <a class="link" :href="project.liveUrl" target="_blank">View online</a>
                     </div>
-                    <div class="text-container">
-                        <h3 class="title3">{{ project.name }}</h3>
-                        <p class="p2">{{ project.description }}</p>
-                        <ul class="tech">
-                            <li v-for="item in project.tech">
-                                {{ item }}<i class="fa-solid fa-circle"></i>
-                            </li>
-                        </ul>
-                        <div class="links">
-                            <a :href="project.githubUrl" target="_blank">Check code</a>
-                            <a :href="project.liveUrl" target="_blank">View online</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+                </div>
+            </li>
+        </ul>
+        <span class="big-circles"></span>
     </section>
 </template>
 
@@ -58,10 +55,94 @@ export default {
 </script>
 
 <style scoped lang="scss">
-section {
+.projects {
     position: relative;
     width: 100%;
     overflow: hidden;
+}
+.cards {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    list-style: none;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.card{
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+
+        @include desktop {
+            padding: 50px 0;
+            flex-direction: row;
+        }
+
+        &:nth-child(even){
+            @include desktop {
+                text-align: right;
+                flex-direction: row-reverse;
+            }
+        }
+
+    &__image {
+        width: 100%;
+        margin: 15px 0;
+        @include desktop {
+            width: 30%;
+        }
+    }
+
+    &__text-container {
+        width: 100%;
+
+        @include desktop {
+            width: 62%;
+        }
+    }
+}
+
+.bullet-list {
+    margin: 20px 0;
+
+    &__item {
+        font-size: 1.1em;
+        display: inline-flex;
+        align-items: center;
+
+        &:last-of-type {
+            .bullet-list__icon {
+                display: none;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 5px;
+        margin: 0 5px;
+    }
+}
+
+.link {
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 20px;
+    border-bottom: 2px solid #353535;
+
+    &:hover {
+        border-color: #78508f;
+    }
+
+    &:last-of-type{
+        margin-right: 0;
+    }
+}
+
+.big-circles {
     &::before {
         display: none;
         content: "";
@@ -79,6 +160,7 @@ section {
             display: block;
         }
     }
+
     &::after {
         content: "";
         position: absolute;
@@ -94,93 +176,6 @@ section {
         @include desktop {
             left: -430px;
             display: block;
-        }
-    }
-}
-.project-list {
-    display: flex;
-    position: relative;
-    z-index: 1;
-    flex-direction: column;
-
-    .item-project {
-        justify-content: space-between;
-        flex-direction: column;
-        padding: 30px 0;
-
-        @include desktop {
-            padding: 50px 0;
-            flex-direction: row;
-        }
-
-        &:nth-child(even){
-
-            @include desktop {
-            flex-direction: row-reverse;
-
-                .text-container {
-                    text-align: right;
-                }
-
-                .tech {
-                    justify-content: flex-end;
-                }
-            }
-        }
-    }
-
-    .image-container {
-        width: 100%;
-        margin: 15px 0;
-        @include desktop {
-            width: 30%;
-        }
-    }
-
-    .text-container {
-        width: 100%;
-
-        @include desktop {
-            width: 62%;
-        }
-    }
-
-    .tech {
-        display: flex;
-        margin: 20px 0;
-
-        li{
-            font-size: 1.1em;
-            display: flex;
-            align-items: center;
-
-            svg {
-                font-size: 5px;
-                margin: 0 5px;
-            }
-
-            &:last-child {
-                svg {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    .links {
-        a {
-            font-weight: 600;
-            display: inline-block;
-            margin-right: 20px;
-            border-bottom: 2px solid #353535;
-
-            &:hover {
-                border-color: #78508f;
-            }
-
-            &:last-of-type{
-                margin-right: 0;
-            }
         }
     }
 }

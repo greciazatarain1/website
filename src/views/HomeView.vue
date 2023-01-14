@@ -1,12 +1,12 @@
 <template>
-    <Attraction />
+    <Hero />
     <AboutMe />
     <MySkills />
     <Projects />
 </template>
 
 <script>
-import Attraction from "@/components/sections/Attraction.vue";
+import Hero from "@/components/sections/Hero.vue";
 import AboutMe from "@/components/sections/AboutMe.vue";
 import MySkills from "@/components/sections/MySkills.vue";
 import Projects from "@/components/sections/Projects.vue";
@@ -18,7 +18,7 @@ export default {
   components: {
     AboutMe,
     MySkills,
-    Attraction,
+    Hero,
     Projects
 },
 };

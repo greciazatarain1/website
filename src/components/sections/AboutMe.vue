@@ -1,13 +1,13 @@
 <template>
-    <section id="about-me">
-        <div class="coll-full row-direction max-width-small">
-            <div class="profile-image">
-                <img alt="Grecia Zatarain - Frontend Developer" src="@/assets/greciazatarain.jpg"/>
-                <span class="circles"></span>
+    <section id="about-me" class="profile">
+        <div class="profile__container">
+            <div class="profile__image-container">
+                <img class="profile__image" alt="Grecia Zatarain - Frontend Developer" src="@/assets/greciazatarain.jpg"/>
+                <span class="profile__circles"></span>
             </div>
-            <div class="text-container">
-                <h3 class="title2">About me</h3>
-                <p class="description">
+            <div class="profile__description">
+                <h3 class="text-heading-medium">About me</h3>
+                <p class="paragraph-small">
                     I'm a <strong>front-end developer</strong> with 5 years of experience working in web development.<br/><br/>
                     I have built responsive user interfaces for all kinds of websites (retail, real estate, restaurants, services, events, music, etc.) and also have experience in quality assurance writing and running test cases.<br/> <br/>
                     <span class="bold">I enjoy the art of creating by coding.</span>
@@ -49,7 +49,7 @@ export default {
   
 
 <style scoped lang="scss">
-#about-me {
+.profile {
     padding-top: 90px;
     padding-bottom: 80px;
     position: relative;
@@ -60,31 +60,38 @@ export default {
         padding-bottom: 125px;
     }
 
-    .coll-full {
-        align-items: center;
-        justify-content: center;
+    &__container {
+        margin: 0 auto;
+        max-width: 1000px;
+        display: flex;
+        
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
 
         @include desktop {
             justify-content: space-between;
         }
     }
-}
-.profile-image {
-    width: 90%;
-    position: relative;
-    margin: 30px 5%;
-    box-sizing: border-box;
 
-    @include phone-only {
-        max-width: 275px;
+    &__image-container {
+        width: 90%;
+        position: relative;
+        margin: 30px 5%;
+        box-sizing: border-box;
+
+        @include mobile {
+            max-width: 275px;
+        }
+
+        @include desktop {
+            width: 30%;
+            margin: 0;
+        }
     }
 
-    @include desktop {
-        width: 30%;
-        margin: 0;
-    }
-
-    img {
+    &__image {
         width: 100%;
         overflow: hidden;
         box-shadow: 0px 10px 40px 0px rgb(50 36 55 / 40%);
@@ -92,37 +99,38 @@ export default {
         z-index: 1;
         position: relative;
     }
-}
 
-.text-container {
-    width: 100%;
-
-    @include desktop {
-        width: 62%; 
-    }
-}
-
-.circles {
-    &::before, &::after {
-        content: "";
+    &__description {
         width: 100%;
-        height: 100%;
-        border: 3px solid #91937c;
-        left: -21px;
-        top: -9px;
-        display: block;
-        position: absolute;
-        transform: rotate(14deg);
-        border-radius: 50%;
+
+        @include desktop {
+            width: 62%; 
+        }
     }
-    &::after {
-        right: -6px;
-        top: inherit;
-        bottom: -23px;
-        left: inherit;
-        border-radius: 50%;
-        border-color: #8d6e85;
-        border-right: 10px solid #8d6e85;
+
+    &__circles {
+        &::before, &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border: 3px solid #91937c;
+            left: -21px;
+            top: -9px;
+            display: block;
+            position: absolute;
+            transform: rotate(14deg);
+            border-radius: 50%;
+        }
+        &::after {
+            right: -6px;
+            top: inherit;
+            bottom: -23px;
+            left: inherit;
+            border-radius: 50%;
+            border-color: #8d6e85;
+            border-right: 10px solid #8d6e85;
+        }
+
     }
 }
 </style>
