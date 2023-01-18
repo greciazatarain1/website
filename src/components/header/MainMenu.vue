@@ -22,8 +22,6 @@ import ContactInfo from "@/components/header/ContactInfo.vue";
   export default {
     name: "MainMenu",
 
-    props: ['isActive'],
-
     components: {
         MenuIcon,
         NavList,
