@@ -1,7 +1,6 @@
 <template>
     <div class="menu-icon" @click="$emit('activeIcon')" :class="{ 'menu-icon--active': activeClass }"> 
         <span class="menu-icon__bars" ></span>
-        {{ isActive }}
     </div>
 </template>
 
