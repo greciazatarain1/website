@@ -9,7 +9,8 @@
                 <h3 class="text-heading-medium">About me</h3>
                 <p class="paragraph-small">
                     I'm a <strong>front-end developer</strong> with 5 years of experience working in web development.<br/><br/>
-                    I have built responsive user interfaces for all kinds of websites (retail, real estate, restaurants, services, events, music, etc.) and also have experience in quality assurance writing and running test cases.<br/> <br/>
+                    I have developed a strong skill set in building responsive user interfaces for a wide range of websites, including those for retail, real estate, restaurants, services, events, music, and more.<br/>
+                    My experience in quality assurance enables me to write and run test cases to ensure the smooth functioning of websites, while also maintaining a sharp eye for detail in design and user experience.<br/><br/>
                     <span class="bold">I enjoy the art of creating by coding.</span>
                 </p>
             </div>
@@ -87,6 +88,7 @@ export default {
 
         @include desktop {
             width: 30%;
+            height: 30%;
             margin: 0;
         }
     }

@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style lang="scss">
+*{
+  box-sizing:border-box;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

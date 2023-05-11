@@ -18,6 +18,7 @@ export default {
         font-family: "Lora", serif;
         position: relative;
         overflow: hidden;
+        z-index: 100001;
 
         &__description {
             position: absolute;

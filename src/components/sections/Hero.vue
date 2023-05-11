@@ -4,7 +4,7 @@
             <div class="hero__text-container flex-center">  
                 <img class="hero__image" src="@/assets/flower.svg" alt="Flower"/>
                 <h2 class="text-heading-xlarge">Hi, I'm Grecia</h2>
-                <p class="paragraph-large">A creative <strong>Frontend developer</strong> base in Amsterdam, Netherlands.</p>         
+                <p class="paragraph-large">I am a highly motivated and results-driven Frontend developer with a creative edge.</p>         
             </div>
         </div>
         <span class="hero__polygon"></span>
